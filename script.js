@@ -1,4 +1,4 @@
-const numbers = [2288, 2, 120, 3102, 4482, 1463, 4913, 54435, 3000]
+const numbers = [2288, 2, 120, 3102, 4482, 1463, 4913, 5435, 3000]
 
 function findMax() {
 	let max = numbers[0]
@@ -13,8 +13,9 @@ function findMax() {
 		}
 		return max
 }
+document.write(findMax());
 
-console.log(findMax())
+
 
 
 
