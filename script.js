@@ -1,20 +1,20 @@
-fetch ('https://dummyjson.com/users')
-	.then(response => response.json()) 
-	.then(users => {
-	const weights = users.map(user => user.weight)
+const numbers = [2288, 2, 120, 3102, 4482, 1463, 4913, 54435, 3000]
 
-	const maxWeight = Math.max(...weights)
-	console.log(`Максимальна вага користувача ${maxWeight}`)
+function findMax() {
+	let max = numbers[0]
+	let min = numbers[0]
 
-	//const minHeight =
+	for (i = 0; i < numbers.length; i++) {
+		if ((numbers[i]) < min) {
+			min = numbers[i]
+		} else if (numbers[i] > max) {
+				max = numbers[i]
+			}
+		}
+		return max
+}
 
-	//const maxHeight = 
-
-	//const avgWeight = 
-	//const avgHeight = 
-
-
-})
+console.log(findMax())
 
 
 
