@@ -1,6 +1,7 @@
 const numbers = [2288, 2, 120, 3102, 4482, 1463, 4913, 5435, 3000]
 
-const findMax1 = (numbers) =>  {
+//нахождение максимального числа методом math.max
+function findMaxMath(numbers)  {
 	return Math.max(...numbers)
 } 
 
@@ -19,9 +20,21 @@ function findMax() {
 	return max
 }
 
+//нахождение среднего числа методом reduse
+function findAverageReduce(numbers) {
+	const sum = numbers.reduce(function(total, number) {
+		return total + number
+	}, 0)
+	return sum / numbers.length
+}
+
+
+
 document.write(findMax()); 
 document.write("<br>")
-document.write(findMax1(numbers));
+document.write(findMaxMath(numbers));
+document.write("<br>")
+document.write(findAverageReduce(numbers));
 
 
 
