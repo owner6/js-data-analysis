@@ -5,6 +5,18 @@ function findMaxMath(numbers)  {
 	return Math.max(...numbers)
 } 
 
+//нахождение максимального числа методом reduse
+function findMaxReduce(numbers) {
+	let max = numbers.reduce(function(sum, current) {
+		if (sum < current) {
+			return current 
+		} else {
+			return sum
+		} 
+	})
+	return max
+}
+
 //нахождение максимальноого числа из массива методом цикла
 function findMax() {
 	let max = numbers[0]
@@ -35,6 +47,8 @@ document.write("<br>")
 document.write(findMaxMath(numbers));
 document.write("<br>")
 document.write(findAverageReduce(numbers));
+document.write("<br>")
+document.write(findMaxReduce(numbers))
 
 
 
