@@ -18,7 +18,7 @@ function findMaxReduce(numbers) {
 }
 
 //нахождение максимальноого числа из массива методом цикла
-function findMax() {
+function findMaxFor() {
 	let max = numbers[0]
 	let min = numbers[0]
 
@@ -32,6 +32,15 @@ function findMax() {
 	return max
 }
 
+//Нахождение среднего числа методом for
+function findAverageFor() {
+	let sum = numbers.length
+	for (i = 0; i < numbers.length; i++) {
+		sum = sum +  numbers[i]
+  }
+  return sum / numbers.length;
+}
+
 //нахождение среднего числа методом reduse
 function findAverageReduce(numbers) {
 	const sum = numbers.reduce(function(total, number) {
@@ -40,15 +49,28 @@ function findAverageReduce(numbers) {
 	return sum / numbers.length
 }
 
+document.write("Нахождение максимального числа методом Math.max ")
+document.write(findMaxMath(numbers)); 
+document.write("<br>")
+
+document.write("Нахождение максимального числа методом reduse ")
+document.write(findMaxReduce(numbers));
+document.write("<br>")
+
+document.write("Нахождение максимальноого числа из массива методом for ")
+document.write(findMaxFor(numbers))
+document.write("<br>")
 
 
-document.write(findMax()); 
-document.write("<br>")
-document.write(findMaxMath(numbers));
-document.write("<br>")
+document.write("Нахождение среднего числа методом reduse ")
 document.write(findAverageReduce(numbers));
 document.write("<br>")
-document.write(findMaxReduce(numbers))
+
+document.write("Нахождение среднего числа методом for ")
+document.write(findAverageFor(numbers));
+document.write("<br>")
+
+
 
 
 
