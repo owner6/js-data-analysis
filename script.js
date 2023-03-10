@@ -63,6 +63,15 @@ function findMinFor() {
 	return min
 }
 
+function factorial(n) {
+	let result = 1
+	
+	for (let i = 1; i <= n; i++) {
+		result = result * i;
+	}
+	return result
+}
+
 document.write("Нахождение максимального числа методом math ")
 document.write(findMaxMath(numbers)); 
 document.write("<br>")
@@ -91,6 +100,12 @@ document.write("<br>")
 document.write("Нахождение минимального числа методом for ")
 document.write(findMinFor(numbers))
 document.write("<br>")
+
+function calculateFactorial() {
+	let n = document.getElementById("number").value
+	let result = factorial(n)
+	document.getElementById("result").innerHTML = "Факториал числа" + n + "=" + result
+}
 
 
 
