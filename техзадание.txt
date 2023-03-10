@@ -25,6 +25,51 @@ const findAverage = (numbers) => {
     // code here
 }
 
+2. //задача
+написати функцію що знаходить факторіал числа
+
+Богдан, [3/10/2023 4:05 PM]
+і ще #задача на масиви і цикли:
+
+Знайти максимально ПАРНЕ число в масиві (ділиться на 2)
+- використовуючи for
+- використовуючи функції масиву (filter, reduce)
+
+
+//задача
+const currencies = [
+    { name: ‘bitcoin’, priceInUSD: 22454 },
+    { name: ‘ethereum’, priceInUSD: 653 },
+    { name: ‘carbo’, priceInUSD: 3 },
+    …. можна тут ще дописати декілька
+]
+
+1.  функція яка знайде валюти які коштують більше 10 доларів
+
+2. функція яка знайде ціну в доларах по назві валюти.
+
+const function getPriceInUsd(name) {
+   // find and return price
+}
+
+3. зробити функцію конвертер з валюти в долар.
+
+const function getPriceInUsd(name, amount) {
+   // return amount in usd
+}
+
+4. зробити конфертер з долара в валюту
+
+const function usdToCurrency(name, amountInUsd) {
+   // return amount in selected currency
+}
+
+5. зробити конвертер з валюти в валюту (через долар)
+
+const function convert(from, to, amount) {
+   // return result
+}
+
 
 Задача1
 
