@@ -37,7 +37,7 @@ function findAverageFor() {
 	let sum = numbers.length
 	for (i = 0; i < numbers.length; i++) {
 		sum = sum +  numbers[i]
-  }
+  } 
   return sum / numbers.length;
 }
 
@@ -49,7 +49,12 @@ function findAverageReduce(numbers) {
 	return sum / numbers.length
 }
 
-document.write("Нахождение максимального числа методом Math.max ")
+//нахождение минимального числа методом Math
+function findMinMath(numbers) {
+	return Math.min(...numbers)
+}
+
+document.write("Нахождение максимального числа методом math ")
 document.write(findMaxMath(numbers)); 
 document.write("<br>")
 
@@ -68,6 +73,10 @@ document.write("<br>")
 
 document.write("Нахождение среднего числа методом for ")
 document.write(findAverageFor(numbers));
+document.write("<br>")
+
+document.write("Нахождение минимального числа методом math ")
+document.write(findMinMath(numbers))
 document.write("<br>")
 
 
