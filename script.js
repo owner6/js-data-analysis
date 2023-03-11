@@ -11,7 +11,7 @@ function findMaxReduce(numbers) {
 		if (sum < current) {
 			return current 
 		} else {
-			return sum
+				return sum
 		} 
 	})
 	return max
@@ -23,7 +23,7 @@ function findMaxFor() {
 
 	for (i = 0; i < numbers.length; i++) {
 		if (numbers[i] > max) {
-				max = numbers[i]
+			max = numbers[i]
 		}
 	}
 	return max
@@ -63,6 +63,7 @@ function findMinFor() {
 	return min
 }
 
+//факторіал числа методом for
 function factorial(n) {
 	let result = 1
 	
@@ -105,7 +106,11 @@ function calculateFactorial() {
 	let n = document.getElementById("number").value
 	let result = factorial(n)
 	document.getElementById("result").innerHTML = "Факториал числа" + n + "=" + result
+	
 }
+const factorialButtonElement = document.getElementById("factorial-button")
+factorialButtonElement.addEventListener("click", calculateFactorial);
+
 
 
 
