@@ -103,16 +103,10 @@ document.write(findMinFor(numbers))
 document.write("<br>")
 
 function calculateFactorial() {
-	let n = document.getElementById("number").value
+	let n = document.getElementById("factorial-number").value
 	let result = factorial(n)
-	document.getElementById("result").innerHTML = "Факториал числа" + n + "=" + result
+	document.getElementById("factorial-result").innerHTML = "Факториал числа" + n + "=" + result
 	
 }
 const factorialButtonElement = document.getElementById("factorial-button")
 factorialButtonElement.addEventListener("click", calculateFactorial);
-
-
-
-
-
-
