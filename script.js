@@ -73,6 +73,30 @@ function factorial(n) {
 	return result
 }
 
+//Факториал числа методом reduse, filter
+/*function factorial
+*/
+
+//знайти парні числа в масиві методом for
+function evenNumbers(numbers) {
+	const findEvenNumber = []
+	for (let i = 0; i < numbers.length; i++) {
+		if ((numbers[i] % 2) === 0) {
+			findEvenNumber.push(numbers[i])
+		} 
+	}
+	return findEvenNumber
+}
+
+
+/*//знайти парні числа в масиві методом reduce
+let result = numbers.reduce(function(elem, remainder) {
+	return elem 
+})*/
+
+document.write(evenNumbers(numbers));
+document.write("<br>")
+
 document.write("Нахождение максимального числа методом math ")
 document.write(findMaxMath(numbers)); 
 document.write("<br>")
@@ -106,7 +130,7 @@ function calculateFactorial() {
 	let n = document.getElementById("factorial-number").value
 	let result = factorial(n)
 	document.getElementById("factorial-result").innerHTML = "Факториал числа" + n + "=" + result
-	
 }
 const factorialButtonElement = document.getElementById("factorial-button")
 factorialButtonElement.addEventListener("click", calculateFactorial);
+
