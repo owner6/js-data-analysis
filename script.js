@@ -73,10 +73,6 @@ function factorial(n) {
 	return result
 }
 
-//Факториал числа методом reduse, filter
-/*function factorial
-*/
-
 //знайти парні числа в масиві методом for
 function evenNumbers(numbers) {
 	const findEvenNumber = []
@@ -88,12 +84,18 @@ function evenNumbers(numbers) {
 	return findEvenNumber
 }
 
+//знайти парні числа в масиві методом reduce
+function evenNumbers(numbers) {
+	const findEvenNumber = numbers.reduce(function(acc, current) {
+		if (current % 2 === 0) {
+			acc.push(current)
+		}  
+		return acc
+	}, [])
+	return findEvenNumber
+}
 
-/*//знайти парні числа в масиві методом reduce
-let result = numbers.reduce(function(elem, remainder) {
-	return elem 
-})*/
-
+document.write("Нахождение парних чисел в массиве методом reduce ")
 document.write(evenNumbers(numbers));
 document.write("<br>")
 
@@ -108,7 +110,6 @@ document.write("<br>")
 document.write("Нахождение максимальноого числа из массива методом for ")
 document.write(findMaxFor(numbers))
 document.write("<br>")
-
 
 document.write("Нахождение среднего числа методом reduse ")
 document.write(findAverageReduce(numbers));
