@@ -83,17 +83,18 @@ function evenNumbers(numbers) {
 	}
 	return findEvenNumber
 }
-/*
-function evenNumbersFilter(numbers) {
+
+/*function evenNumbersFilter(numbers) {
 	return numbers.filter(function(num) {
 		return num % 2 === 0
 	})
 }*/
 
-const evenNumbersFilter = (numbers) => numbers.filter(num % 2 === 0)
+const evenNumbersFilter = (numbers) => numbers.filter (num => num % 2 === 0)
 
-console.log(evenNumbersFilter(numbers))
-
+document.write("Нахождение парных чисел методом filter ")
+document.write(evenNumbersFilter(numbers))
+document.write("<br>")
 
 document.write("Нахождение парных числ методом for ")
 document.write(evenNumbers(numbers))
