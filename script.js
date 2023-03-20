@@ -83,20 +83,20 @@ function evenNumbers(numbers) {
 	}
 	return findEvenNumber
 }
+/*
+function evenNumbersFilter(numbers) {
+	return numbers.filter(function(num) {
+		return num % 2 === 0
+	})
+}*/
 
-//знайти парні числа в масиві методом reduce
-function evenNumbers(numbers) {
-	const findEvenNumber = numbers.reduce(function(acc, current) {
-		if (current % 2 === 0) {
-			acc.push(current)
-		}  
-		return acc
-	}, [])
-	return findEvenNumber
-}
+const evenNumbersFilter = (numbers) => numbers.filter(num % 2 === 0)
 
-document.write("Нахождение парних чисел в массиве методом reduce ")
-document.write(evenNumbers(numbers));
+console.log(evenNumbersFilter(numbers))
+
+
+document.write("Нахождение парных числ методом for ")
+document.write(evenNumbers(numbers))
 document.write("<br>")
 
 document.write("Нахождение максимального числа методом math ")
