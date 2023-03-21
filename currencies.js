@@ -7,5 +7,8 @@ const currencies = [
 ]
 
 let newCurrensies = currencies.filter (currency => currency.priceInUsd > 10)
-
 console.log(newCurrensies)
+
+currencies.forEach (function(array_item, index) {
+	console.log(array_item)
+})
