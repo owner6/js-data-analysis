@@ -6,8 +6,11 @@ const currencies = [
 	{name: "sugarchain", priceInUsd: 0.01},
 ]
 
+function newCurrensiesObj() {
 let newCurrensies = currencies.filter (currency => currency.priceInUsd > 10)
-console.log(newCurrensies)
+	return newCurrensies
+}
+console.log(newCurrensiesObj())
 
 function getPriceInUsd(currencyName) {
 	for (let i = 0; i < currencies.length; i++) {
@@ -23,9 +26,28 @@ console.log(getPriceInUsd("etherium"))
 console.log(getPriceInUsd("sugarchain"))
 console.log(getPriceInUsd("wax"))
 
-const findCurrency = (currencyName) => currencies.findIndex (item => item.name === currencyName) 
-console.log(findCurrency("wax"))
-console.log(findCurrency("bitcoin"))
-console.log(findCurrency("etherium"))
-console.log(findCurrency("karbo"))
-console.log(findCurrency("sugarchain"))
+const findObj = (currencyName) => {
+	let currency = currencies.find (item => item.name === currencyName) 
+		if (currency) {
+			return currency.priceInUsd
+		} else  {
+				 return null
+		  }
+}
+
+document.write("wax: ")
+document.write(findObj("wax"))
+document.write("<br>")
+document.write("bitcoin: ")
+document.write(findObj("bitcoin"))
+document.write("<br>")
+document.write("karbo: ")
+document.write(findObj("karbo"))
+document.write("<br>")
+document.write("etherium: ")
+document.write(findObj("etherium"))
+document.write("<br>")
+document.write("sugarchain: ")
+document.write(findObj("sugarchain"))
+document.write("<br>")
+
