@@ -73,6 +73,33 @@ function factorial(n) {
 	return result
 }
 
+//знайти парні числа в масиві методом for
+function evenNumbers(numbers) {
+	const findEvenNumber = []
+	for (let i = 0; i < numbers.length; i++) {
+		if ((numbers[i] % 2) === 0) {
+			findEvenNumber.push(numbers[i])
+		} 
+	}
+	return findEvenNumber
+}
+
+/*function evenNumbersFilter(numbers) {
+	return numbers.filter(function(num) {
+		return num % 2 === 0
+	})
+}*/
+
+const evenNumbersFilter = (numbers) => numbers.filter (num => num % 2 === 0)
+
+document.write("Нахождение парных чисел методом filter ")
+document.write(evenNumbersFilter(numbers))
+document.write("<br>")
+
+document.write("Нахождение парных числ методом for ")
+document.write(evenNumbers(numbers))
+document.write("<br>")
+
 document.write("Нахождение максимального числа методом math ")
 document.write(findMaxMath(numbers)); 
 document.write("<br>")
@@ -84,7 +111,6 @@ document.write("<br>")
 document.write("Нахождение максимальноого числа из массива методом for ")
 document.write(findMaxFor(numbers))
 document.write("<br>")
-
 
 document.write("Нахождение среднего числа методом reduse ")
 document.write(findAverageReduce(numbers));
@@ -106,7 +132,7 @@ function calculateFactorial() {
 	let n = document.getElementById("factorial-number").value
 	let result = factorial(n)
 	document.getElementById("factorial-result").innerHTML = "Факториал числа" + n + "=" + result
-	
 }
 const factorialButtonElement = document.getElementById("factorial-button")
 factorialButtonElement.addEventListener("click", calculateFactorial);
+
