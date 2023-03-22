@@ -34,7 +34,6 @@ const findObj = (currencyName) => {
 				 return null
 		  }
 }
-
 document.write("wax: ")
 document.write(findObj("wax"))
 document.write("<br>")
