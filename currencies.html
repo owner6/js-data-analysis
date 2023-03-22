@@ -5,14 +5,16 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<h1>Конвертер валют</h1>
+<h1 class="a1Main">Конвертер валют</h1>
 <form id="converter">
 	<label for="amount">Введіть кількість монет: </label>
 	<input type="text" id="amount" name="amount">
 
+<div class="panel">
 	<label for="from">У меня есть</label>
 	<select id="from" name="from">
 		<option value="bitcoin">Bitcoin</option>
@@ -24,16 +26,18 @@
 		<option value="token">Token</option>
 	</select>
 
+
+
 	<label for="to">Хочу получить</label>
 	<select id="to" name="to">
 		<option value="usd">Usd</option>
 		<option value="bitcoin">Bitcoin</option>
 		<option value="karbo">Karbo</option>
 	</select>
-
+</div>
 
 	
-	<button type="submit">Конвертировать</button>
+	<button class="a1" type="submit">Конвертировать</button>
 </form>
 
 	<p><span id="result"></span></p>
