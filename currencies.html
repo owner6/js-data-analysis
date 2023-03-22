@@ -7,7 +7,37 @@
 	<title>Document</title>
 </head>
 <body>
+
+<h1>Конвертер валют</h1>
+<form id="converter">
+	<label for="amount">Введіть кількість монет: </label>
+	<input type="text" id="amount" name="amount">
+
+	<label for="from">У меня есть</label>
+	<select id="from" name="from">
+		<option value="bitcoin">Bitcoin</option>
+		<option value="etherium">Etherium</option>
+		<option value="wax">Wax</option>
+		<option value="karbo">Karbo</option>
+		<option value="sugarchain">Sugarchain</option>
+		<option value="usd">Usd</option>
+		<option value="token">Token</option>
+	</select>
+
+	<label for="to">Хочу получить</label>
+	<select id="to" name="to">
+		<option value="usd">Usd</option>
+		<option value="bitcoin">Bitcoin</option>
+		<option value="karbo">Karbo</option>
+	</select>
+
+
 	
+	<button type="submit">Конвертировать</button>
+</form>
+
+	<p><span id="result"></span></p>
+
 <script src="currencies.js"></script>	
 </body>
 </html>
