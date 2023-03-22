@@ -50,3 +50,15 @@ document.write("sugarchain: ")
 document.write(findObj("sugarchain"))
 document.write("<br>")
 
+function convertCurrency(ammount, from_currency, to_currency) {
+	const fromRate = currency.find(currency => currency.name === from_currency).priceInUsd
+	const toRate = currency.find(currency => currency.name === to_currency).priceInUsd
+
+	//калькуляция коефициента
+	const conversionRate = toRate / fromRate
+	//конвертация	
+	const convertedAmmount =  ammount * conversionRate 
+
+	return convertedAmmount
+}
+console.log(convertCurrency(1, "bitcoin", "karbo"))
