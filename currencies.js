@@ -28,6 +28,7 @@ console.log(getPriceInUsd("etherium"))
 console.log(getPriceInUsd("sugarchain"))
 console.log(getPriceInUsd("wax"))
 
+
 const findObj = (currencyName) => {
 	let currency = currencies.find (item => item.name === currencyName) 
 		if (currency) {
