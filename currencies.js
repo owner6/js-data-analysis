@@ -9,8 +9,8 @@ const currencies = [
 ]
 
 function newCurrensiesObj() {
-let newCurrensies = currencies.filter (currency => currency.priceInUsd > 10)
-	return newCurrensies
+	let newCurrensies = currencies.filter (currency => currency.priceInUsd > 10)
+		return newCurrensies
 }
 console.log(newCurrensiesObj())
 
@@ -57,12 +57,13 @@ function convertCurrency(amount, from_currency, to_currency) {
 	const fromRate = currencies.find(currencies => currencies.name === from_currency).priceInUsd
 	const toRate = currencies.find(currencies => currencies.name === to_currency).priceInUsd
 
-	//калькуляция коефициента
+	//calculation coeficient
 	const conversionRate = fromRate / toRate
-	//конвертация	
+	
+	//convert	
 	const convertedAmount =  amount * conversionRate 
   
-	return convertedAmount 	
+		return convertedAmount 	
 }
 
 const form = document.querySelector("#converter")
