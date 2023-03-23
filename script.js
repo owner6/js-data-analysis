@@ -84,11 +84,29 @@ function evenNumbers(numbers) {
 	return findEvenNumber
 }
 
-/*function evenNumbersFilter(numbers) {
-	return numbers.filter(function(num) {
-		return num % 2 === 0
-	})
-}*/
+//Середнє значення всіх чисел
+function average() {
+	let total = evenNumbers(numbers).reduce(function(sum, current) {
+		return sum + current
+	}, 0)
+	return total / numbers.length
+}
+document.write(average())
+document.write("<br>")
+
+//filter+map+reduce
+let evenNumbersFilterMethod = numbers.filter((elem) => (elem % 2 == 0))
+let squaresMap = evenNumbersFilterMethod.map((num) => (num * num ))
+let sumSquaresNumbers = squaresMap.reduce((acum, number) => (acum + number), 0)
+
+document.write(sumSquaresNumbers)
+document.write("<br>")
+
+/*
+.filter
+.map
+.reduce
+*/
 
 const evenNumbersFilter = (numbers) => numbers.filter (num => num % 2 === 0)
 
