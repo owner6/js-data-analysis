@@ -8,52 +8,6 @@ const currencies = [
 	{name: "token", priceInUsd: 0.00005} 
 ]
 
-function newCurrensiesObj() {
-	let newCurrensies = currencies.filter (currency => currency.priceInUsd > 10)
-		return newCurrensies
-}
-console.log(newCurrensiesObj())
-
-function getPriceInUsd(currencyName) {
-	for (let i = 0; i < currencies.length; i++) {
-		if (currencies[i].name === currencyName) {
-			return currencies[i].priceInUsd
-		}
-	}
-	return null
-}
-console.log(getPriceInUsd("karbo"))
-console.log(getPriceInUsd("bitcoin"))
-console.log(getPriceInUsd("etherium"))
-console.log(getPriceInUsd("sugarchain"))
-console.log(getPriceInUsd("wax"))
-
-
-const findObj = (currencyName) => {
-	let currency = currencies.find (item => item.name === currencyName) 
-		if (currency) {
-			return currency.priceInUsd
-		} else  {
-				 return null
-		  }
-}
-document.write("<br>")
-document.write("wax: ")
-document.write(findObj("wax"))
-document.write("<br>")
-document.write("bitcoin: ")
-document.write(findObj("bitcoin"))
-document.write("<br>")
-document.write("karbo: ")
-document.write(findObj("karbo"))
-document.write("<br>")
-document.write("etherium: ")
-document.write(findObj("etherium"))
-document.write("<br>")
-document.write("sugarchain: ")
-document.write(findObj("sugarchain"))
-document.write("<br>")
-
 function convertCurrency(amount, from_currency, to_currency) {
 	const fromRate = currencies.find(currencies => currencies.name === from_currency).priceInUsd
 	const toRate = currencies.find(currencies => currencies.name === to_currency).priceInUsd
@@ -71,7 +25,7 @@ const form = document.querySelector("#converter")
 
 form.addEventListener("submit", function(event) {
 	event.preventDefault()
-	
+
 	const amount = document.querySelector("#amount").value
 	const fromCurrency = document.querySelector("#from").value
 	const toCurrency = document.querySelector("#to").value
@@ -81,6 +35,26 @@ form.addEventListener("submit", function(event) {
 	const resultElement = document.querySelector("#result")
 	resultElement.textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`
 })
-	/*document.write(convertCurrency(1, "bitcoin", "karbo"))*/
+
+const fromSelect = document.getElementById('from');
+const imagesFrom = {
+  bitcoin: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/150px-Bitcoin.svg.png',
+  etherium: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/120px-Ethereum_logo_2014.svg.png',
+  wax: 'https://www.castlecrypto.gg/wp-content/uploads/2021/02/wax-token-1.png',
+  karbo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Krb-logo.png/600px-Krb-logo.png',
+  sugarchain: 'https://sugarchain.org/logo.png',
+  usd: 'https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png'
+};
+
+const toSelect = document.getElementById('to');
+const imagesTo = {
+	usd: 'https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png'
+};
+
+const dropList = document.querySelector('.drop-list select');
+
+
+
+
 
 

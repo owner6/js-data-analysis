@@ -2,41 +2,85 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Currency Converter App in Javascript</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<h1 class="a1Main">Конвертер валют</h1>
+	<!----
+	<h1 class="a1Main">Currency Converter</h1>
 	<form id="converter">
-		<label for="amount">Введіть кількість монет: </label>
-		<input type="text" id="amount" name="amount">
-
+		<label for="amount">Enter amount:</label>
+		<input type="text" id="amount" name="amount" >
+	
 		<div class="panel">
-			<label for="from">В мене є</label>
-			<select id="from" name="from">
-				<option value="bitcoin">Bitcoin</option>
-				<option value="etherium">Etherium</option>
-				<option value="wax">Wax</option>
-				<option value="karbo">Karbo</option>
-				<option value="sugarchain">Sugarchain</option>
-				<option value="usd">Usd</option>
-			</select>
+				<div class="inside_navigation" id="">
+					<label for="from">From</label>
+						<select id="from" name="from">
+							<option value="bitcoin">BTC</option>
+							<option value="etherium">ETH</option>
+							<option value="wax">WAX</option>
+							<option value="karbo">KRB</option>
+							<option value="sugarchain">SUGAR</option>
+							<option value="usd">USD</option>
+						</select>
+				</div>
+				
+				<div class="inside_navigation" id="">
+					<label for="to">To</label>
+					<select id="to" name="to">
+						<option value="usd">USD</option>
+						<option value="bitcoin">BTC</option>
+					</select>
+				</div>
+				<span id="result"></span>
+				<button class="a1" type="submit">Конвертувати</button>
+		</div>			
+	</form>
+-->
 
-			<label for="to">Хочу отримати</label>
-			<select id="to" name="to">
-				<option value="usd">Usd</option>
-				<option value="bitcoin">Bitcoin</option>
-			</select>
+
+		<div class="wrapper">
+			<header>Currency Converter</header>
+			<form id="converter">
+				<div class="amount">
+					<p>Enter amount</p>
+					<input type="text" value="1" id="amount" name="amount">
+				</div>
+				
+				<div class="drop-list">
+					<div class="from">
+						<p>From</p>
+						<div class="select-box">
+							<select id="from">
+								<option value="bitcoin" data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/150px-Bitcoin.svg.png">BTC</option>
+								<option value="etherium" data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/120px-Ethereum_logo_2014.svg.png">ETH</option>
+								<option value="wax" data-img-url="https://www.castlecrypto.gg/wp-content/uploads/2021/02/wax-token-1.png">WAX</option>
+								<option value="karbo" data-img-url="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Krb-logo.png/600px-Krb-logo.png">KRB</option>
+								<option value="sugarchain" data-img-url="https://sugarchain.org/logo.png">SUGAR</option>
+								<option value="usd" data-img-url="https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png">USD</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="icon"><i class="fas fa-exchange-alt"></i></div>
+
+					<div class="to">
+						<p>To</p>
+						<div class="select-box">
+							<select id="to">
+								<option value="usd" data-img-url="https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png">USD</option>
+								<option value="bitcoin" data-img-url="https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png">BTC</option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="exchange-rate" id="result">1 bitcoin = 28500 usd</div>
+				<button>Get Exchange Rate</button>
+			</form>
 		</div>
 
-				<button class="a1" type="submit">Конвертувати</button>
-	</form>
-
-				<p><span id="result"></span></p>
-
+ 
 	<script src="currencies.js"></script>	
 </body>
 </html>
