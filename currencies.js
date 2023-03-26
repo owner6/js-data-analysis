@@ -12,7 +12,6 @@ function newCurrensiesObj() {
 	let newCurrensies = currencies.filter (currency => currency.priceInUsd > 10)
 		return newCurrensies
 }
-console.log(newCurrensiesObj())
 
 function getPriceInUsd(currencyName) {
 	for (let i = 0; i < currencies.length; i++) {
@@ -22,12 +21,6 @@ function getPriceInUsd(currencyName) {
 	}
 	return null
 }
-console.log(getPriceInUsd("karbo"))
-console.log(getPriceInUsd("bitcoin"))
-console.log(getPriceInUsd("etherium"))
-console.log(getPriceInUsd("sugarchain"))
-console.log(getPriceInUsd("wax"))
-
 
 const findObj = (currencyName) => {
 	let currency = currencies.find (item => item.name === currencyName) 
@@ -37,22 +30,6 @@ const findObj = (currencyName) => {
 				 return null
 		  }
 }
-document.write("<br>")
-document.write("wax: ")
-document.write(findObj("wax"))
-document.write("<br>")
-document.write("bitcoin: ")
-document.write(findObj("bitcoin"))
-document.write("<br>")
-document.write("karbo: ")
-document.write(findObj("karbo"))
-document.write("<br>")
-document.write("etherium: ")
-document.write(findObj("etherium"))
-document.write("<br>")
-document.write("sugarchain: ")
-document.write(findObj("sugarchain"))
-document.write("<br>")
 
 function convertCurrency(amount, from_currency, to_currency) {
 	const fromRate = currencies.find(currencies => currencies.name === from_currency).priceInUsd
@@ -81,6 +58,3 @@ form.addEventListener("submit", function(event) {
 	const resultElement = document.querySelector("#result")
 	resultElement.textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`
 })
-	/*document.write(convertCurrency(1, "bitcoin", "karbo"))*/
-
-
