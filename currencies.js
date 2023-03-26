@@ -24,11 +24,7 @@ function getPriceInUsd(currencyName) {
 
 const getCurrencyPriceByName = (currencyName) => {
 	let currency = currencies.find (item => item.name === currencyName) 
-		if (currency) {
-			return currency.priceInUsd
-		} else  {
-				 return null
-		  }
+	return currency ? currency.priceInUsd : null
 }
 
 function convertCurrency(amount, from_currency, to_currency) {
