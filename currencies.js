@@ -8,15 +8,15 @@ const currencies = [
 	{name: "token", priceInUsd: 0.00005} 
 ]
 
-function nfilterCurrenciesByPrice() {
+function filterCurrenciesByPrice() {
 	let newCurrensies = currencies.filter (currency => currency.priceInUsd > 10)
-		return newCurrensies
+	return newCurrensies
 }
 
 function getPriceInUsd(currencyName) {
 	for (let i = 0; i < currencies.length; i++) {
 		if (currencies[i].name === currencyName) {
-			return currencies[i].priceInUsd
+		return currencies[i].priceInUsd
 		}
 	}
 	return null
@@ -36,8 +36,7 @@ function convertCurrency(amount, from_currency, to_currency) {
 	
 	//convert	
 	const convertedAmount =  amount * conversionRate 
-  
-		return convertedAmount 	
+	return convertedAmount 	
 }
 
 const form = document.querySelector("#converter")
