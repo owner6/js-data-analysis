@@ -37,22 +37,6 @@ form.addEventListener("submit", function(event) {
 	resultElement.textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`
 })
 
-const fromSelect = document.getElementById('from');
-const imagesFrom = {
-  bitcoin: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/150px-Bitcoin.svg.png',
-  etherium: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/120px-Ethereum_logo_2014.svg.png',
-  wax: 'https://www.castlecrypto.gg/wp-content/uploads/2021/02/wax-token-1.png',
-  karbo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Krb-logo.png/600px-Krb-logo.png',
-  sugarchain: 'https://sugarchain.org/logo.png',
-  usd: 'https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png'
-};
-
-const toSelect = document.getElementById('to');
-const imagesTo = {
-	usd: 'https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png'
-};
-
-const dropList = document.querySelector('.drop-list select');
 
 
 
