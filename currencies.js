@@ -35,10 +35,3 @@ form.addEventListener("submit", function(event) {
 	const resultElement = document.querySelector("#result")
 	resultElement.textContent = `${amount} ${fromCurrency} = ${convertedAmount} ${toCurrency}`
 })
-
-
-
-
-
-
-
