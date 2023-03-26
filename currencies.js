@@ -8,7 +8,7 @@ const currencies = [
 	{name: "token", priceInUsd: 0.00005} 
 ]
 
-function newCurrensiesObj() {
+function nfilterCurrenciesByPrice() {
 	let newCurrensies = currencies.filter (currency => currency.priceInUsd > 10)
 		return newCurrensies
 }
@@ -22,7 +22,7 @@ function getPriceInUsd(currencyName) {
 	return null
 }
 
-const findObj = (currencyName) => {
+const getCurrencyPriceByName = (currencyName) => {
 	let currency = currencies.find (item => item.name === currencyName) 
 		if (currency) {
 			return currency.priceInUsd
