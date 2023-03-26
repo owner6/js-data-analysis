@@ -21,6 +21,7 @@ function convertCurrency(amount, from_currency, to_currency) {
 		return convertedAmount 	
 }
 
+//UI
 const form = document.querySelector("#converter")
 
 form.addEventListener("submit", function(event) {
