@@ -17,8 +17,7 @@ function convertCurrency(amount, from_currency, to_currency) {
 	
 	//convert	
 	const convertedAmount =  amount * conversionRate 
-  
-		return convertedAmount 	
+	return convertedAmount 	
 }
 
 //UI
