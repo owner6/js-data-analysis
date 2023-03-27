@@ -70,9 +70,10 @@ form .droplist {
 }
 
 .select-box select {
-	width: auto;
+	width: 90px;
 	font-size: 16px;
 	margin: 0 -5px 0 5px;
+	text-align: center;
 }
 
 .select-box img {
@@ -107,6 +108,7 @@ form button {
 .select-box {
 	display: flex;
 	align-items: center;
+	border: 1px solid #999;
 }
 	
 .from,
@@ -117,7 +119,7 @@ form button {
 	justify-content: center;
 	align-items: center;
 }
-	
+
 .icon {
 	margin: 0 10px;
 	font-weight: bolder;
