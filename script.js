@@ -1,11 +1,11 @@
 const numbers = [2288, 2, 120, 3102, 4482, 1463, 4913, 5435, 3000]
 
-//нахождение максимального числа методом math.max
+//search max number math method
 function findMaxMath(numbers)  {
 	return Math.max(...numbers)
 } 
 
-//нахождение максимального числа методом reduse
+//search max number reduse method
 function findMaxReduce(numbers) {
 	let max = numbers.reduce(function(sum, current) {
 		if (sum < current) {
@@ -17,7 +17,7 @@ function findMaxReduce(numbers) {
 	return max
 }
 
-//нахождение максимальноого числа из массива методом цикла
+//search max number array for method
 function findMaxFor() {
 	let max = numbers[0]
 
@@ -29,7 +29,7 @@ function findMaxFor() {
 	return max
 }
 
-//Нахождение среднего числа методом for
+//search average number for method
 function findAverageFor(numbers) {
 	let sum = 0
 	for (i = 0; i < numbers[i]; i++) {
@@ -38,7 +38,7 @@ function findAverageFor(numbers) {
   return (sum / numbers.length)
 }
 
-//нахождение среднего числа методом reduse
+//нахождение average number reduse method
 function findAverageReduce(numbers) {
 	const sum = numbers.reduce(function(total, number) {
 		return total + number
@@ -46,12 +46,12 @@ function findAverageReduce(numbers) {
 	return sum / numbers.length
 }
 
-//нахождение минимального числа методом Math
+//search min number Math method
 function findMinMath(numbers) {
 	return Math.min(...numbers)
 }
 
-//нахождение минимального числа методом for
+//search min number for method
 function findMinFor() {
 	let min = numbers[0]
 	
@@ -63,7 +63,7 @@ function findMinFor() {
 	return min
 }
 
-//факторіал числа методом for
+//factorial number for method
 function factorial(n) {
 	let result = 1
 	
@@ -73,7 +73,7 @@ function factorial(n) {
 	return result
 }
 
-//знайти парні числа в масиві методом for
+//search even numbers in array for method
 function evenNumbers(numbers) {
 	const findEvenNumber = []
 	for (let i = 0; i < numbers.length; i++) {
@@ -84,11 +84,29 @@ function evenNumbers(numbers) {
 	return findEvenNumber
 }
 
-/*function evenNumbersFilter(numbers) {
-	return numbers.filter(function(num) {
-		return num % 2 === 0
-	})
-}*/
+//average values of all numbers by reduce method
+function average() {
+	let total = evenNumbers(numbers).reduce(function(sum, current) {
+		return sum + current
+	}, 0)
+	return total / numbers.length
+}
+document.write(average())
+document.write("<br>")
+
+//filter+map+reduce
+let evenNumbersFilterMethod = numbers.filter((elem) => (elem % 2 == 0))
+let squaresMap = evenNumbersFilterMethod.map((num) => (num * num ))
+let sumSquaresNumbers = squaresMap.reduce((acum, number) => (acum + number), 0)
+
+document.write(sumSquaresNumbers)
+document.write("<br>")
+
+/*
+.filter
+.map
+.reduce
+*/
 
 const evenNumbersFilter = (numbers) => numbers.filter (num => num % 2 === 0)
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<h1 class="a1Main">Конвертер валют</h1>
+	<form id="converter">
+		<label for="amount">Введіть кількість монет: </label>
+		<input type="text" id="amount" name="amount">
+
+		<div class="panel">
+			<label for="from">В мене є</label>
+			<select id="from" name="from">
+				<option value="bitcoin">Bitcoin</option>
+				<option value="etherium">Etherium</option>
+				<option value="wax">Wax</option>
+				<option value="karbo">Karbo</option>
+				<option value="sugarchain">Sugarchain</option>
+				<option value="usd">Usd</option>
+			</select>
+
+			<label for="to">Хочу отримати</label>
+			<select id="to" name="to">
+				<option value="usd">Usd</option>
+				<option value="bitcoin">Bitcoin</option>
+			</select>
+		</div>
+
+		<button class="a1" type="submit-button">Convert</button>
+	</form>
+	<p><span id="result"></span></p>
+	<script src="currencies.js"></script>
+</body>
+</html>
