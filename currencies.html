@@ -2,49 +2,51 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Currency Converter App in Javascript</title>
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-		<div class="wrapper">
-			<header>Currency Converter</header>
-			<form id="converter">
-				<div class="amount">
-					<p>Enter amount</p>
-					<input type="text" value="1" id="amount" name="amount">
-				</div>
+	<div class="wrapper">
+		<header>Currency Converter</header>
+		<form id="converter">
+			<div class="amount">
+				<p>Enter amount</p>
+				<input type="text" value="1" id="amount" name="amount">
+			</div>
 				
-				<div class="drop-list">
-					<div class="from">
-						<p>From</p>
-						<div class="select-box">
-							<select id="from">
-								<option value="bitcoin" data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/150px-Bitcoin.svg.png">BTC</option>
-								<option value="etherium" data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/120px-Ethereum_logo_2014.svg.png">ETH</option>
-								<option value="wax" data-img-url="https://www.castlecrypto.gg/wp-content/uploads/2021/02/wax-token-1.png">WAX</option>
-								<option value="karbo" data-img-url="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Krb-logo.png/600px-Krb-logo.png">KRB</option>
-								<option value="sugarchain" data-img-url="https://sugarchain.org/logo.png">SUGAR</option>
-								<option value="usd" data-img-url="https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png">USD</option>
-							</select>
-						</div>
-					</div>
-					<div class="icon"> <img src=""></div>
-					<div class="to">
-						<p>To</p>
-						<div class="select-box">
-							<select id="to">
-								<option value="usd" data-img-url="https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png">USD</option>
-								<option value="bitcoin" data-img-url="https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png">BTC</option>
-							</select>
-						</div>
+			<div class="drop-list">
+				<div class="from">
+					<p>From</p>
+					<div class="select-box">
+						<select id="from">
+							<option value="bitcoin" data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/150px-Bitcoin.svg.png">BTC</option>
+							<option value="etherium" data-image="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Ethereum_logo_2014.svg/120px-Ethereum_logo_2014.svg.png">ETH</option>
+							<option value="wax" data-img-url="https://www.castlecrypto.gg/wp-content/uploads/2021/02/wax-token-1.png">WAX</option>
+							<option value="karbo" data-img-url="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Krb-logo.png/600px-Krb-logo.png">KRB</option>
+							<option value="sugarchain" data-img-url="https://sugarchain.org/logo.png">SUGAR</option>
+							<option value="usd" data-img-url="https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png">USD</option>
+						</select>
 					</div>
 				</div>
-				<div class="exchange-rate" id="result">1 bitcoin = 28500 usd</div>
-				<button type="submit-button">Get Exchange Rate</button>
-			</form>
-		</div>
+				<div class="icon"> <img src=""></div>
+				<div class="to">
+					<p>To</p>
+					<div class="select-box">
+						<select id="to">
+							<option value="usd" data-img-url="https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png">USD</option>
+							<option value="bitcoin" data-img-url="https://www.pngall.com/wp-content/uploads/12/USD-Background-PNG.png">BTC</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="exchange-rate" id="result">1 bitcoin = 28500 usd</div>
+			<button type="submit-button">Get Exchange Rate</button>
+		</form>
+  </div>
 		
-		<script src="currencies.js"></script>	
+	<script src="currencies.js"></script>	
 </body>
 </html>
