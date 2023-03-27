@@ -1,8 +1,6 @@
 *{
 	padding: 0px;
-	margin: 0px;
 	box-sizing: border-box;
-	font-family: "Poppins" sans-serif;
 }
 
 body {
@@ -11,6 +9,7 @@ body {
 	justify-content: center;
 	min-height: 100vh;
 	background: #675AFE;
+	font-family: 'Poppins';font-size: 22px;
 }
 
 .wrapper {
@@ -81,11 +80,9 @@ form .droplist {
 }
 
 .drop-list .icon {
-	cursor: pointer;
-	font-size: 22px;
-	margin-top: 30px;
-	height: 35px;
-	width: 35px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 form .exchange-rate {
@@ -100,3 +97,30 @@ form button {
 	cursor: pointer;
 	background: #675AFE ;
 }
+
+.drop-list {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	}
+
+.select-box {
+	display: flex;
+	align-items: center;
+}
+	
+.from,
+.to,
+.icon {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+	
+.icon {
+	margin: 0 10px;
+}
+
+
+	
