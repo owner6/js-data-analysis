@@ -8,6 +8,25 @@ const currencies = [
 	{name: "token", priceInUsd: 0.00005} 
 ]
 
+function filterCurrenciesByPrice() {
+	let newCurrensies = currencies.filter (currency => currency.priceInUsd > 10)
+	return newCurrensies
+}
+
+function getPriceInUsd(currencyName) {
+	for (let i = 0; i < currencies.length; i++) {
+		if (currencies[i].name === currencyName) {
+		return currencies[i].priceInUsd
+		}
+	}
+	return null
+}
+
+const getCurrencyPriceByName = (currencyName) => {
+	let currency = currencies.find (item => item.name === currencyName) 
+	return currency ? currency.priceInUsd : null
+}
+
 function convertCurrency(amount, from_currency, to_currency) {
 	const fromRate = currencies.find(currencies => currencies.name === from_currency).priceInUsd
 	const toRate = currencies.find(currencies => currencies.name === to_currency).priceInUsd
